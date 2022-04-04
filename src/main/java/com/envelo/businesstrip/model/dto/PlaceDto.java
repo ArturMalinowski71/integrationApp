@@ -7,27 +7,25 @@ import lombok.Setter;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.math.BigDecimal;
 
 @NoArgsConstructor
 @Getter
 @Setter
-public class CountryDto {
+public class PlaceDto {
     private long id;
 
     @NotBlank
     @Size(min = 2, max = 50)
-    private String name;
-
-    @NotNull
-    private BigDecimal dietAmount;
+    private String city;
 
     @NotBlank
     @Size(min = 2, max = 50)
-    private String dietCurrency;
+    private String street;
 
-    private boolean isActive;
+    @NotBlank
+    @Size(min = 2, max = 50)
+    private String postCode;
 
     @NotNull
-    private String documentVersion;
+    private CountryDto countryDto;
 }
