@@ -1,10 +1,12 @@
-package com.envelo.businesstrip.model.dto;
+package com.envelo.businesstrip.model.dtos;
 
+import com.envelo.businesstrip.model.dtos.CountryDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -18,11 +20,9 @@ public class PlaceDto {
     @Size(min = 2, max = 50)
     private String city;
 
-    @NotBlank
     @Size(min = 2, max = 50)
     private String street;
 
-    @NotBlank
     @Size(min = 2, max = 50)
     private String postCode;
 
