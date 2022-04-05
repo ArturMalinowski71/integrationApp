@@ -1,11 +1,53 @@
-### Java Spring template project
+#Conventions
 
-This project is based on a GitLab [Project Template](https://docs.gitlab.com/ee/gitlab-basics/create-project.html).
+## 1. Git
 
-Improvements can be proposed in the [original project](https://gitlab.com/gitlab-org/project-templates/spring).
+### 1.1 Creating new branches
 
-### CI/CD with Auto DevOps
+type / initials - brief
 
-This template is compatible with [Auto DevOps](https://docs.gitlab.com/ee/topics/autodevops/).
+### 1.2 Commit message
 
-If Auto DevOps is not already enabled for this project, you can [turn it on](https://docs.gitlab.com/ee/topics/autodevops/#enabling-auto-devops) in the project settings.
+type : brief
+
+description
+
+### 1.3 Types:
+
+- build: changes related to build system
+- ci: changes related to continuous integration and development system
+- docs: changes related to documentation
+- feat: new backwards-compatible abilities or functionalities
+- fix: changes related to backwards-compatible bug fixes
+- perf: changes related to backward-compatible performance improvements
+- refactor: related to modifying the codebase, which neither adds a feature nor fixes a bug
+- style: related to styling the codebase, regardless of the meaning
+- test: changes related to tests
+
+##### 1.4 More on types conventions [here](https://nitayneeman.com/posts/understanding-semantic-commit-messages-using-git-and-angular/#build)
+
+##### 1.5 More on naming conventions [here](https://www.conventionalcommits.org/en/v1.0.0/)
+
+## 2 Development conventions
+
+### 2.1 Packages
+Main package: **com.envelo.buisnesstrip.**
+
+Other packages:
+
+- .configurations
+- .controllers
+- .model
+    - .dto
+    - .entity
+    - .enums
+    - .mappers
+- .populator
+- .repositories
+- .security
+- .services
+
+### 2.2 Entities
+Entity should have annotation for table name i.e: @Table(name = "countries")
+
+###### [How to create README (markdown) file](https://www.markdownguide.org/basic-syntax/)
