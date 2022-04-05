@@ -1,14 +1,14 @@
-#Conventions
+# Conventions
 
 ## 1. Git
 
 ### 1.1 Creating new branches
 
-type / initials - brief
+type/initials-brief
 
 ### 1.2 Commit message
 
-type : brief
+type: brief
 
 description
 
@@ -31,23 +31,28 @@ description
 ## 2 Development conventions
 
 ### 2.1 Packages
+
 Main package: **com.envelo.buisnesstrip.**
 
 Other packages:
 
+- .annotations
 - .configurations
 - .controllers
+- .exceptions
 - .model
-    - .dto
-    - .entity
+    - .dtos
+    - .entities
     - .enums
     - .mappers
 - .populator
 - .repositories
 - .security
 - .services
+- .utils
 
 ### 2.2 Entities
+
 Entity should have annotation for table name i.e: @Table(name = "countries")
 
 ###### [How to create README (markdown) file](https://www.markdownguide.org/basic-syntax/)

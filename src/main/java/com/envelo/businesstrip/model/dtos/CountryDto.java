@@ -1,12 +1,11 @@
-package com.envelo.businesstrip.model.dto;
+package com.envelo.businesstrip.model.dtos;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
 @NoArgsConstructor
@@ -19,15 +18,18 @@ public class CountryDto {
     @Size(min = 2, max = 50)
     private String name;
 
-    @NotNull
+    @NotNull //TODO test with and without @NotNull
+    @DecimalMin(value = "0.00", inclusive = false)
+    @Digits(integer = 8, fraction = 2)
     private BigDecimal dietAmount;
 
     @NotBlank
     @Size(min = 2, max = 50)
     private String dietCurrency;
 
-    private boolean isActive;
+    private boolean isActive = true;
 
-    @NotNull
+    @NotBlank
+    @Size(min = 2, max = 50)
     private String documentVersion;
 }
