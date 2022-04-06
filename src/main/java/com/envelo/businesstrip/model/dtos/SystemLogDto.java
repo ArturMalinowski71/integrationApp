@@ -16,7 +16,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
-@AllArgsConstructor
 public class SystemLogDto {
     private Long id;
 
