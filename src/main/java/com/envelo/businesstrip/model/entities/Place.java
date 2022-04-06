@@ -23,7 +23,7 @@ public class Place {
     @Column(length = 50)
     private String street;
 
-    @Column(length = 50)
+    @Column(length = 10)
     private String postCode;
 
     @NotNull
