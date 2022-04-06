@@ -10,11 +10,11 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Getter
-@Setter
+@Table(name = "users")
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
+@Getter
+@Setter
 
 public class User {
     @Id
@@ -35,10 +35,8 @@ public class User {
     @Column(nullable=false)
     private String title;
 
-    @Column(nullable=false)
     private  String supervisor;
 
-    @Column(nullable=false)
     private Set<String> subordinates;
 
     @Enumerated (EnumType.STRING)
