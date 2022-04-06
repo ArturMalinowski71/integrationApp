@@ -25,7 +25,7 @@ public class AttachmentDto {
     @NotNull(message = "Scan of document must not be null.")
     private byte[] scanOfDocument;
 
-    public AttachmentDto(String type, BigDecimal amount, @NotNull(message = "Scan of document must not be null.") byte[] scanOfDocument) {
+    public AttachmentDto(String type, BigDecimal amount, byte[] scanOfDocument) {
         this.type = type;
         this.amount = amount;
         this.scanOfDocument = scanOfDocument;
