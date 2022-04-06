@@ -1,6 +1,5 @@
 package com.envelo.businesstrip.model.dtos;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

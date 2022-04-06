@@ -19,7 +19,7 @@ public class OwnTransport {
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private OwnTransportType ownTransportType;
-    
+
     private int kilometersTravelled;
 
     public OwnTransport(OwnTransportType ownTransportType, int kilometersTravelled) {
