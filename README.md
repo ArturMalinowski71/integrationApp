@@ -65,7 +65,7 @@ Other packages:
 
 Entity should have annotation for table name written with lower case <br/>
 If name has multiple parts they should be separated with '_' <br/>
-i.e: @Table(name = "application_form")
+i.e: @Table(name = "application_forms")
 
 ### 2.3 Good practices
 
