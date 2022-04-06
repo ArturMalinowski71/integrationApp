@@ -12,24 +12,32 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 public class CountryDto {
-    private long id;
+    private Long id;
 
-    @NotBlank
-    @Size(min = 2, max = 50)
+    @NotBlank(message = "Name must not be null.")
+    @Size(min = 2, max = 50, message = "Length of name must be between 2 to 50 characters.")
     private String name;
 
-    @NotNull //TODO test with and without @NotNull
-    @DecimalMin(value = "0.00", inclusive = false)
-    @Digits(integer = 8, fraction = 2)
+    @NotNull(message = "Diet amount must not be null") //TODO test with and without @NotNull
+    @DecimalMin(value = "0.00", inclusive = false, message = "Diet amount must be higher than 0.00")
+    @Digits(integer = 8, fraction = 2, message = "Diet amount fraction must not be higher than 2.")
     private BigDecimal dietAmount;
 
-    @NotBlank
-    @Size(min = 2, max = 50)
+    @NotBlank(message = "Diet currency must not me blank.")
+    @Size(min = 2, max = 50, message = "Diet currency must be in length between 2 to 50 characters.")
     private String dietCurrency;
 
     private boolean isActive = true;
 
-    @NotBlank
-    @Size(min = 2, max = 50)
+    @NotBlank(message = "Document version must not be blank")
+    @Size(min = 2, max = 50, message = "Document version must be in length between 2 to 50 characters.")
     private String documentVersion;
+
+    public CountryDto(String name, BigDecimal dietAmount, String dietCurrency, boolean isActive, String documentVersion) {
+        this.name = name;
+        this.dietAmount = dietAmount;
+        this.dietCurrency = dietCurrency;
+        this.isActive = isActive;
+        this.documentVersion = documentVersion;
+    }
 }
