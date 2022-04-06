@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 public class SystemLogDto {
     private Long id;
 
+    @NotNull
     @Enumerated(EnumType.STRING)
     private LogLevel logLevel;
 
