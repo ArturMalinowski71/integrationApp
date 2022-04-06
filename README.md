@@ -4,15 +4,15 @@
 
 ### 1.1 Creating new branches
 
-####type/initials/brief
+type/initials/brief
 
 brief should be short description of task followed by task number (i.e. feat/AS/applicationFormService-AE201) 
 
 ### 1.2 Commit message
 
-####type: brief
+type: brief
 
-####description
+description
 
 ### 1.3 Merge Requests
 
