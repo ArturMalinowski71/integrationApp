@@ -19,7 +19,12 @@ description
 If you want to introduce your changes to develop branch you should push your changes to your working branch. 
 Next you have to create pull request that has to be approved by at least one person. 
 When merging branch to develop you should squash commits.
-Pull request has link to jira task.
+
+Merge request title should look like:
+
+taskNumber - brief
+
+In description, it should have link to task in jira
 
 ### 1.4 Types:
 
