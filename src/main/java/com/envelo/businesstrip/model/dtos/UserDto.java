@@ -14,7 +14,6 @@ import java.util.Set;
 @Getter
 @Setter
 public class UserDto {
-
     private String id;
 
     @NotBlank(message = "e-mail must not be blank")
