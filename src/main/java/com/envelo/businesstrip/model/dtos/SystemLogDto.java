@@ -24,7 +24,7 @@ public class SystemLogDto {
     private LogLevel logLevel;
 
     @NotBlank
-    @Size(min = 2, max = 20, message = "Length of invoker user name must be between {min} to {max} characters.")
+    @Size(min = 2, max = 50, message = "Length of invoker user name must be between {min} to {max} characters.")
     private String invokerUserName;
 
     @NotBlank
