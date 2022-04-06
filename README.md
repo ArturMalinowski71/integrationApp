@@ -4,9 +4,9 @@
 
 ### 1.1 Creating new branches
 
-type/initials/brief
+taskNumber/type/initials/brief
 
-brief should be short description of task followed by task number (i.e. feat/AS/applicationFormService-AE201) 
+brief should be short description (i.e. AE201/feat/AS/applicationFormService) 
 
 ### 1.2 Commit message
 
@@ -19,6 +19,7 @@ description
 If you want to introduce your changes to develop branch you should push your changes to your working branch. 
 Next you have to create pull request that has to be approved by at least one person. 
 When merging branch to develop you should squash commits.
+Pull request has link to jira task.
 
 ### 1.4 Types:
 
