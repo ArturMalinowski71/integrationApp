@@ -3,7 +3,6 @@ package com.envelo.businesstrip.model.dtos;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
