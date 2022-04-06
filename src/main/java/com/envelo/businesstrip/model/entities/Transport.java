@@ -7,11 +7,11 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
 @Entity
 @Table(name = "transports")
+@NoArgsConstructor
+@Getter
+@Setter
 public class Transport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
