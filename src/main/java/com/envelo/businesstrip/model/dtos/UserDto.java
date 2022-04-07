@@ -17,23 +17,23 @@ public class UserDto {
     private String id;
 
     @NotBlank(message = "e-mail must not be blank")
-    @Size(min = 2, max = 50, message = "Length of e-mail must be between 2 to 50 characters")
+    @Size(min = 2, max = 50, message = "Length of e-mail must be between {min} to {max} characters")
     private String email;
 
     @NotBlank(message = "First name must not be blank")
-    @Size(min = 2, max = 50, message = "Length of first name must be between 2 to 50 characters")
+    @Size(min = 2, max = 50, message = "Length of first name must be between {min} to {max} characters")
     private String firstName;
 
     @NotBlank(message = "Last name must not be blank")
-    @Size(min = 2, max = 50, message = "Length of last name must be between 2 to 50 characters")
+    @Size(min = 2, max = 50, message = "Length of last name must be between {min} to {max} characters")
     private String lastName;
 
     @NotBlank(message = "Department must not be blank")
-    @Size(min = 2, max = 50, message = "Length of department must be between 2 to 50 characters")
+    @Size(min = 2, max = 50, message = "Length of department must be between {min} to {max} characters")
     private String department;
 
     @NotBlank(message = "Title must not be blank")
-    @Size(min = 2, max = 50, message = "Length of title must be between 2 to 50 characters")
+    @Size(min = 2, max = 50, message = "Length of title must be between {min} to {max} characters")
     private String title;
 
     private String supervisor;

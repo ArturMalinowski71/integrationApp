@@ -14,7 +14,7 @@ public class TransportDto {
     private Long id;
 
     @NotBlank(message = "Type must not be null.")
-    @Size(min = 2, max = 50, message = "Length of type must be between 2 to 50 characters.")
+    @Size(min = 2, max = 50, message = "Length of type must be between {min} to {max} characters.")
     private String type;
 
     public TransportDto(String type) {
