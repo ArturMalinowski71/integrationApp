@@ -1,5 +1,6 @@
 package com.envelo.businesstrip.model.entities;
 
+import com.envelo.businesstrip.model.entities.attachments.Attachment;
 import com.envelo.businesstrip.model.enums.ExpenseReportStatus;
 import lombok.*;
 import org.hibernate.annotations.Cascade;

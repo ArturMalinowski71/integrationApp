@@ -1,5 +1,7 @@
 package com.envelo.businesstrip.model.dtos;
 
+import com.envelo.businesstrip.model.entities.ApplicationForm;
+import com.envelo.businesstrip.model.entities.ExpenseReport;
 import com.envelo.businesstrip.model.enums.BusinessTripStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

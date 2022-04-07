@@ -8,25 +8,31 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "comments")
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@Entity
 public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String authorId;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    private User author;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Department department;
 
+    @Column(nullable = false)
     private LocalDateTime creationTime;
+
+    @Column(nullable = false)
     private String content;
 
-    public Comment(String authorId, Department department, LocalDateTime creationTime, String content) {
-        this.authorId = authorId;
+    public Comment(User author, Department department, LocalDateTime creationTime, String content) {
+        this.author = author;
         this.department = department;
         this.creationTime = creationTime;
         this.content = content;

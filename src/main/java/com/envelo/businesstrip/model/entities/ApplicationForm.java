@@ -46,5 +46,8 @@ public class ApplicationForm {
     private AdvancePayment advancePayment;
 
     @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            joinColumns = @JoinColumn(name = "application_form_id"),
+            inverseJoinColumns = @JoinColumn(name = "transport_id"))
     private Set<Transport> transports;
 }
