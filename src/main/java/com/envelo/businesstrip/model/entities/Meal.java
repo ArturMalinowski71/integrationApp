@@ -15,10 +15,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class Meal {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     private int numberOfBreakfasts;
     private int numberOfLunches;
     private int numberOfDinners;
