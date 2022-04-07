@@ -13,10 +13,6 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 public class Place {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Column(nullable = false, length = 50)
     private String city;
 
