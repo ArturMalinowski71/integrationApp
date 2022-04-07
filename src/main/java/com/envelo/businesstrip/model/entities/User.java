@@ -15,7 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Getter
 @Setter
-
+@Builder.Default @ElementCollection(fetch = FetchType.LAZY)
 public class User {
     @Id
     private String id;
@@ -37,8 +37,8 @@ public class User {
 
     private  String supervisor;
 
-    private Set<String> subordinates;
+    private Set<String> subordinates = new HashSet<>();
 
     @Enumerated (EnumType.STRING)
-    private Set<Role> roles;
+    private Set<Role> roles = new HashSet<>();
 }
