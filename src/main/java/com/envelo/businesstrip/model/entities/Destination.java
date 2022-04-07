@@ -35,4 +35,7 @@ public class Destination {
     @Column(nullable=false)
     @Enumerated(EnumType.STRING)
     private Hotel hotel;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    private Country country;
 }
