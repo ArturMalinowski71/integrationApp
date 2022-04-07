@@ -14,7 +14,7 @@ public class CountryDto {
     private Long id;
 
     @NotBlank(message = "Name must not be null.")
-    @Size(min = 2, max = 50, message = "Length of name must be between 2 to 50 characters.")
+    @Size(min = 2, max = 50, message = "Length of name must be between {min} to {max} characters.")
     private String name;
 
     @NotNull(message = "Diet amount must not be null") //TODO test with and without @NotNull
@@ -23,13 +23,13 @@ public class CountryDto {
     private BigDecimal dietAmount;
 
     @NotBlank(message = "Diet currency must not me blank.")
-    @Size(min = 2, max = 50, message = "Diet currency must be in length between 2 to 50 characters.")
+    @Size(min = 2, max = 50, message = "Diet currency must be in length between {min} to {max} characters.")
     private String dietCurrency;
 
     private boolean isActive = true;
 
     @NotBlank(message = "Document version must not be blank")
-    @Size(min = 2, max = 50, message = "Document version must be in length between 2 to 50 characters.")
+    @Size(min = 2, max = 50, message = "Document version must be in length between {min} to {max} characters.")
     private String documentVersion;
 
     public CountryDto(String name, BigDecimal dietAmount, String dietCurrency, boolean isActive, String documentVersion) {

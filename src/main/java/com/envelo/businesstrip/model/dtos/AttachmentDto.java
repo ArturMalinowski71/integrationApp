@@ -16,7 +16,7 @@ public class AttachmentDto {
     private Long id;
 
     @NotBlank(message = "Attachment type must not be blank.")
-    @Size(min = 2, max = 50, message = "Length of type must be between 2 to 50 characters.")
+    @Size(min = 2, max = 50, message = "Length of type must be between {min} to {max} characters.")
     private String type;
 
     @NotNull(message = "Attachment amount must not be null.")
