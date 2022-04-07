@@ -24,13 +24,9 @@ public class PlaceDto {
     @Size(min = 2, max = 10, message = "Length of post code must be between 2 to 10 characters.")
     private String postCode;
 
-    @NotNull(message = "CountryDto must not be null.")
-    private CountryDto countryDto;
-
     public PlaceDto(String city, String street, String postCode, CountryDto countryDto) {
         this.city = city;
         this.street = street;
         this.postCode = postCode;
-        this.countryDto = countryDto;
     }
 }
