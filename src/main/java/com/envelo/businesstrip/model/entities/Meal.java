@@ -20,8 +20,6 @@ public class Meal {
     private Long id;
 
     private int numberOfBreakfasts;
-
     private int numberOfLunches;
-
     private int numberOfDinners;
 }

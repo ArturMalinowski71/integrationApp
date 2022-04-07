@@ -21,6 +21,7 @@ public class Comment {
 
     @Enumerated(EnumType.STRING)
     private Department department;
+
     private LocalDateTime creationTime;
     private String content;
 

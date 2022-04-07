@@ -21,6 +21,7 @@ public class SystemLog {
 
     @Enumerated(EnumType.STRING)
     private LogLevel logLevel;
+
     private String invokerUserName;
     private String logDetails;
     private LocalDateTime logDate;
