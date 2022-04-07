@@ -34,11 +34,14 @@ public class User {
 
     @Column(nullable=false)
     private String title;
-    @Builder.Default @ElementCollection(fetch = FetchType.LAZY)
+
     private  String supervisor;
+
     @Builder.Default @ElementCollection(fetch = FetchType.LAZY)
     private Set<String> subordinates = new HashSet<>();
 
+    @Builder.Default @ElementCollection(fetch = FetchType.LAZY)
+    @Column(nullable=false)
     @Enumerated (EnumType.STRING)
     private Set<Role> roles = new HashSet<>();
 }
