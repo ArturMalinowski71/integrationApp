@@ -3,7 +3,6 @@ package com.envelo.businesstrip.model.dtos.expenseReportDto;
 import com.envelo.businesstrip.model.dtos.CommentDto;
 import com.envelo.businesstrip.model.dtos.OwnTransportDto;
 import com.envelo.businesstrip.model.dtos.UserDto;
-import com.envelo.businesstrip.model.dtos.attachments.AttachmentLightweightDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,9 +13,9 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@SuperBuilder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
 public abstract class ExpenseReportBaseDto {

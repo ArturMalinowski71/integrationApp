@@ -1,10 +1,7 @@
 package com.envelo.businesstrip.model.dtos;
 
 import com.envelo.businesstrip.model.enums.LogLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -13,7 +10,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class SystemLogDto {
@@ -33,11 +32,4 @@ public class SystemLogDto {
 
     @NotNull
     private LocalDateTime logDate;
-
-    public SystemLogDto(LogLevel logLevel, String invokerUserName, String logDetails, LocalDateTime logDate) {
-        this.logLevel = logLevel;
-        this.invokerUserName = invokerUserName;
-        this.logDetails = logDetails;
-        this.logDate = logDate;
-    }
 }
