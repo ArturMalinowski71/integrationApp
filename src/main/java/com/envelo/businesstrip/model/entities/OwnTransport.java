@@ -1,29 +1,23 @@
 package com.envelo.businesstrip.model.entities;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.validator.constraints.Range;
+import com.envelo.businesstrip.model.entities.base.BaseEntity;
+import lombok.*;
 
-import javax.persistence.*;
-import javax.validation.constraints.Min;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "own_transports")
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@NoArgsConstructor
-public class OwnTransport {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class OwnTransport extends BaseEntity {
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private OwnTransportType ownTransportType;
 
     private int kilometersTravelled;
-
-    public OwnTransport(OwnTransportType ownTransportType, int kilometersTravelled) {
-        this.ownTransportType = ownTransportType;
-        this.kilometersTravelled = kilometersTravelled;
-    }
 }

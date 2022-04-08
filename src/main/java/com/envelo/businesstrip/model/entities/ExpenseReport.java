@@ -1,26 +1,22 @@
 package com.envelo.businesstrip.model.entities;
 
 import com.envelo.businesstrip.model.entities.attachments.Attachment;
-import com.envelo.businesstrip.model.enums.ExpenseReportStatus;
+import com.envelo.businesstrip.model.entities.base.BaseEntity;
 import lombok.*;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+
 @Entity
 @Table(name = "expense_reports")
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@Builder
-public class ExpenseReport {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class ExpenseReport extends BaseEntity {
     @Column(nullable = false)
     private LocalDateTime creationTime;
 
