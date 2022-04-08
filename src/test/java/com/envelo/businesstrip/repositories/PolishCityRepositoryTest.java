@@ -21,7 +21,7 @@ class PolishCityRepositoryTest {
         polishCityRepository.deleteAll();
     }
     @Test
-    void should_return_list_of_polish_cities_Starting_With_Wa() {
+    void findAllByNameStartingWithIgnoreCase_shouldReturnPolishCities_startingWithGivenString() {
 
         //given
         String name = "Warszawa";
