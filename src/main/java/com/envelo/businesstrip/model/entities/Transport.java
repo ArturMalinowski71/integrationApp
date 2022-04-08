@@ -1,25 +1,17 @@
 package com.envelo.businesstrip.model.entities;
 
-import lombok.Generated;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.envelo.businesstrip.model.entities.base.BaseEntity;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "transports")
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
-public class Transport {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class Transport extends BaseEntity {
     private String type;
-
-    public Transport(String type) {
-        this.type = type;
-    }
 }

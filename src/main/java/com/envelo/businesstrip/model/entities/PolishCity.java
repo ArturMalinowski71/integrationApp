@@ -1,26 +1,20 @@
 package com.envelo.businesstrip.model.entities;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.envelo.businesstrip.model.entities.base.BaseEntity;
+import lombok.*;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "polish_cities")
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@NoArgsConstructor
-public class PolishCity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
+public class PolishCity extends BaseEntity {
+    @Column(nullable = false, length = 100)
     private String name;
-
-    public PolishCity(String name) {
-        this.name = name;
-    }
 }
