@@ -14,8 +14,10 @@ import java.time.LocalDateTime;
 @Builder
 @Getter
 @Setter
+@ToString
 public class Comment extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ToString.Exclude
     private User author;
 
     @Column(nullable = false)
