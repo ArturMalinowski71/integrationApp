@@ -1,6 +1,6 @@
 package com.envelo.businesstrip.model.entities;
 
-import com.envelo.businesstrip.model.entities.attachments.Attachment;
+import com.envelo.businesstrip.model.entities.attachments.BaseAttachment;
 import com.envelo.businesstrip.model.entities.base.BaseEntity;
 import lombok.*;
 
@@ -34,7 +34,7 @@ public class ExpenseReport extends BaseEntity {
 
     @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JoinColumn(name = "expense_report_id")
-    private List<Attachment> attachments;
+    private List<BaseAttachment> baseAttachments;
 
     @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JoinColumn(name = "expense_report_id")

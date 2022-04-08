@@ -1,5 +1,7 @@
 package com.envelo.businesstrip.model.entities.attachments;
 
+import com.envelo.businesstrip.model.entities.Meal;
+import com.envelo.businesstrip.model.entities.Place;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,30 +9,31 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "transport_attachments")
+@Table(name = "hotel_attachments")
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
 @Getter
 @Setter
-public class TransportAttachment extends Attachment {
+public class HotelBaseAttachment extends BaseAttachment {
     @Column(nullable = false)
-    private LocalDateTime startDate;
+    private LocalDate startDate;
 
     @Column(nullable = false)
-    private LocalDateTime endDate;
+    private LocalDate endDate;
+
+    @Embedded
+    private Place place;
 
     @Column(nullable = false, length = 50)
-    private String startingPlace;
+    private String country;
 
-    @Column(nullable = false, length = 50)
-    private String destinationPlace;
-
-    @Column(nullable = false, length = 50)
-    private String typeOfTransport;
+    @Embedded
+    private Meal meal;
 }
