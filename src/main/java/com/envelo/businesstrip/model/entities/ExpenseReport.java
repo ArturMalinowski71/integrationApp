@@ -22,10 +22,10 @@ public class ExpenseReport extends BaseEntity {
 
     private LocalDateTime acceptanceTime;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, optional = false)
     private User supervisor;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     private User accountant;
 
     private LocalDateTime actualStartDate;
