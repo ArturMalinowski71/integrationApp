@@ -8,6 +8,13 @@
 5. code review by at least two people
 6. code review should check if points 1-3 are done
 
+### Test naming
+
+Test should be named as follows:
+- MethodName_ExpectedBehavior_StateUnderTest
+
+More [here](https://dzone.com/articles/7-popular-unit-test-naming), 2nd point 
+
 # Conventions
 
 ## 1. Git

@@ -1,13 +1,13 @@
 package com.envelo.businesstrip.model.dtos;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class TransportDto {
@@ -16,8 +16,4 @@ public class TransportDto {
     @NotBlank(message = "Type must not be null.")
     @Size(min = 2, max = 50, message = "Length of type must be between {min} to {max} characters.")
     private String type;
-
-    public TransportDto(String type) {
-        this.type = type;
-    }
 }

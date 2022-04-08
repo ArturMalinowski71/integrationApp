@@ -1,14 +1,13 @@
 package com.envelo.businesstrip.model.dtos;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class PlaceDto {
@@ -23,10 +22,4 @@ public class PlaceDto {
 
     @Size(min = 2, max = 10, message = "Length of post code must be between {min} to {max} characters.")
     private String postCode;
-
-    public PlaceDto(String city, String street, String postCode, CountryDto countryDto) {
-        this.city = city;
-        this.street = street;
-        this.postCode = postCode;
-    }
 }

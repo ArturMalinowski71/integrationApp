@@ -1,16 +1,18 @@
 package com.envelo.businesstrip.model.dtos;
 
 import com.envelo.businesstrip.model.enums.Role;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class UserDto {
@@ -43,16 +45,4 @@ public class UserDto {
     @NotEmpty(message = "User role must be specified")
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
-
-    public UserDto(String id, String email, String firstName, String lastName, String department, String title, String supervisor, Set<String> subordinates, Set<Role> roles) {
-        this.id = id;
-        this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.department = department;
-        this.title = title;
-        this.supervisor = supervisor;
-        this.subordinates = subordinates;
-        this.roles = roles;
-    }
 }

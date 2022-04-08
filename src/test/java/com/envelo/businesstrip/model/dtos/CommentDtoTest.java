@@ -17,12 +17,13 @@ class CommentDtoTest {
 
         Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
-        CommentDto commentDto = new CommentDto(
-                "   ",
-                Department.ACCOUNTANT,
-                LocalDateTime.now(),
-                "Costam"
-        );
+        CommentDto commentDto = CommentDto
+                .builder()
+                .authorId("  ")
+                .department(Department.ACCOUNTANT)
+                .creationTime(LocalDateTime.now())
+                .content("Costam")
+                .build();
 
         Set<ConstraintViolation<CommentDto>> violations = validator.validate(commentDto);
         StringBuilder sb = new StringBuilder();
