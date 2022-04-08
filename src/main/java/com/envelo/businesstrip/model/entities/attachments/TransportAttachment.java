@@ -1,20 +1,23 @@
 package com.envelo.businesstrip.model.entities.attachments;
 
-import com.envelo.businesstrip.model.entities.Transport;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
-import javax.persistence.*;
-import java.math.BigDecimal;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "transport_attachments")
+@AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
-@NoArgsConstructor
 public class TransportAttachment extends Attachment {
     @Column(nullable = false)
     private LocalDateTime startDate;
@@ -30,14 +33,4 @@ public class TransportAttachment extends Attachment {
 
     @Column(nullable = false, length = 50)
     private String typeOfTransport;
-
-    public TransportAttachment(String type, BigDecimal amount, byte[] scanOfDocument, LocalDateTime startDate,
-                               LocalDateTime endDate, String startingPlace, String destinationPlace, String typeOfTransport) {
-        super(type, amount, scanOfDocument);
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.startingPlace = startingPlace;
-        this.destinationPlace = destinationPlace;
-        this.typeOfTransport = typeOfTransport;
-    }
 }

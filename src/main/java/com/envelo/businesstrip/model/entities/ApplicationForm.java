@@ -1,5 +1,6 @@
 package com.envelo.businesstrip.model.entities;
 
+import com.envelo.businesstrip.model.entities.base.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -10,16 +11,12 @@ import java.util.Set;
 
 @Entity
 @Table(name = "application_forms")
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class ApplicationForm {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class ApplicationForm extends BaseEntity {
     @Column(nullable = false)
     private LocalDateTime creationDate;
 
