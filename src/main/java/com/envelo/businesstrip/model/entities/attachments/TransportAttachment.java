@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @SuperBuilder
 @Getter
 @Setter
-public class TransportBaseAttachment extends BaseAttachment {
+public class TransportAttachment extends BaseAttachment {
     @Column(nullable = false)
     private LocalDateTime startDate;
 
