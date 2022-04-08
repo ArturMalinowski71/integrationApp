@@ -1,9 +1,8 @@
-package com.envelo.businesstrip.model.dtos.expenseReportDto;
+package com.envelo.businesstrip.model.dtos.expenseReport;
 
 import com.envelo.businesstrip.model.dtos.CommentDto;
 import com.envelo.businesstrip.model.dtos.OwnTransportDto;
 import com.envelo.businesstrip.model.dtos.UserDto;
-import com.envelo.businesstrip.model.dtos.attachments.AttachmentLightweightDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
