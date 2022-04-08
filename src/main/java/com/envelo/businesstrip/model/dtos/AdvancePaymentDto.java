@@ -1,14 +1,13 @@
 package com.envelo.businesstrip.model.dtos;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
-
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class AdvancePaymentDto {
@@ -17,8 +16,4 @@ public class AdvancePaymentDto {
 
     @NotNull(message = "Advance payment amount must not be null.")
     private BigDecimal amount;
-
-    public AdvancePaymentDto(BigDecimal amount) {
-        this.amount = amount;
-    }
 }

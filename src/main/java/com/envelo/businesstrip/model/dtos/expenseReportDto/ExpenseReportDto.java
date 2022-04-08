@@ -9,11 +9,11 @@ import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
-@SuperBuilder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
-public class ExpenseReportDto extends ExpenseReportBaseDto{
+public class ExpenseReportDto extends ExpenseReportBaseDto {
     private List<AttachmentDto> attachmentsDto;
 }

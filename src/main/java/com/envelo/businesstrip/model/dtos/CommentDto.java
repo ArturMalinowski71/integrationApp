@@ -1,9 +1,7 @@
 package com.envelo.businesstrip.model.dtos;
 
-import com.envelo.businesstrip.model.enums.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.NoArgsConstructor;
+import com.envelo.businesstrip.model.enums.Department;
+import lombok.*;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -13,7 +11,9 @@ import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class CommentDto {
@@ -34,11 +34,4 @@ public class CommentDto {
     @NotBlank(message = "Comment content must not be blank.")
     @Size(min = 2, max = 200, message = "Length of comment's content must be between {min} to {max} characters.")
     private String content;
-
-    public CommentDto(String authorId, Department department, LocalDateTime creationTime, String content) {
-        this.authorId = authorId;
-        this.department = department;
-        this.creationTime = creationTime;
-        this.content = content;
-    }
 }

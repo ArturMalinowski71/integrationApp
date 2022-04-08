@@ -1,13 +1,13 @@
 package com.envelo.businesstrip.model.dtos;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class CountryDto {
@@ -31,12 +31,4 @@ public class CountryDto {
     @NotBlank(message = "Document version must not be blank")
     @Size(min = 2, max = 50, message = "Document version must be in length between {min} to {max} characters.")
     private String documentVersion;
-
-    public CountryDto(String name, BigDecimal dietAmount, String dietCurrency, boolean isActive, String documentVersion) {
-        this.name = name;
-        this.dietAmount = dietAmount;
-        this.dietCurrency = dietCurrency;
-        this.isActive = isActive;
-        this.documentVersion = documentVersion;
-    }
 }

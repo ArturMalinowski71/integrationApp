@@ -1,16 +1,18 @@
 package com.envelo.businesstrip.model.dtos.attachments;
 
-import com.envelo.businesstrip.model.dtos.PlaceDto;
 import com.envelo.businesstrip.model.dtos.TransportDto;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import javax.validation.constraints.NotNull;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
 public class TransportAttachmentDto extends AttachmentDto {
@@ -28,20 +30,4 @@ public class TransportAttachmentDto extends AttachmentDto {
 
     @NotNull(message = "Transport must not be null")
     private TransportDto transportDto;
-
-    public TransportAttachmentDto(String type,
-                                  BigDecimal amount,
-                                  byte[] scanOfDocument,
-                                  LocalDateTime startDate,
-                                  LocalDateTime endDate,
-                                  String startingPlace,
-                                  String destinationPlace,
-                                  TransportDto transportDto) {
-        super(type, amount, scanOfDocument);
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.startingPlace = startingPlace;
-        this.destinationPlace = destinationPlace;
-        this.transportDto = transportDto;
-    }
 }

@@ -1,12 +1,12 @@
 package com.envelo.businesstrip.model.dtos;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class OwnTransportDto {
@@ -17,9 +17,4 @@ public class OwnTransportDto {
     private OwnTransportTypeDto ownTransportTypeDto;
 
     private int kilometersTravelled;
-
-    public OwnTransportDto(OwnTransportTypeDto ownTransportTypeDto, int kilometersTravelled) {
-        this.ownTransportTypeDto = ownTransportTypeDto;
-        this.kilometersTravelled = kilometersTravelled;
-    }
 }
