@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @SuperBuilder
 @Getter
 @Setter
-public class OtherAttachment extends Attachment {
+public class OtherBaseAttachment extends BaseAttachment {
     @Column(nullable = false)
     private LocalDate date;
 
