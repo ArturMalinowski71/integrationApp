@@ -9,9 +9,9 @@ import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
-@SuperBuilder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
 public class ExpenseReportLightweightDto extends ExpenseReportBaseDto{
