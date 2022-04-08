@@ -1,10 +1,10 @@
 package com.envelo.businesstrip.model.dtos;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class MealDto {
@@ -13,10 +13,4 @@ public class MealDto {
     private int numberOfBreakfasts;
     private int numberOfLunches;
     private int numberOfDinners;
-
-    public MealDto(int numberOfBreakfasts, int numberOfLunches, int numberOfDinners) {
-        this.numberOfBreakfasts = numberOfBreakfasts;
-        this.numberOfLunches = numberOfLunches;
-        this.numberOfDinners = numberOfDinners;
-    }
 }

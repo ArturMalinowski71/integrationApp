@@ -12,9 +12,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@SuperBuilder
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
 public abstract class BusinessTripBaseDto {
@@ -22,11 +22,11 @@ public abstract class BusinessTripBaseDto {
 
     private String code;
     @NotBlank(message = "Departament must not be null.")
-    @Size(min = 2, max = 50, message = "Length of departament must be between 2 to 50 characters.")
+    @Size(min = 2, max = 50, message = "Length of departament must be between {min} to {max} characters.")
     private String department;
 
     @NotBlank(message = "Position must not be null.")
-    @Size(min = 2, max = 50, message = "Length of position must be between 2 to 50 characters.")
+    @Size(min = 2, max = 50, message = "Length of position must be between {min} to {max} characters.")
     private String position;
 
     @NotNull(message = "Application form must not be null.")

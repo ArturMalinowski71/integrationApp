@@ -1,9 +1,6 @@
 package com.envelo.businesstrip.model.dtos;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -13,6 +10,7 @@ import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
 public class ApplicationFormDto {
@@ -26,7 +24,7 @@ public class ApplicationFormDto {
 
     @NotNull(message = "Commissioner must not be null")
     private UserDto commissioner;
-    
+
     private String delegationPurpose;
     private String comment;
     private LocalDate declaredStartDate;
