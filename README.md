@@ -1,3 +1,13 @@
+#Definition of Done
+
+1. user story of task is done
+   application runs
+2. unit tests for task are created
+3. all unit test pass
+4. created merge request
+5. code review by at least two people
+6. code review should check if points 1-3 are done
+
 # Conventions
 
 ## 1. Git
