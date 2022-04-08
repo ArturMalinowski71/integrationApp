@@ -28,7 +28,7 @@ public class CommentRepositoryTest {
     private TestEntityManager entityManager;
 
     @Test
-    void findAllByExpenseReportId_shouldReturnListOfComments_whenCommentsAreConnectedToExpenseReport() {
+    void findAllByExpenseReportById_shouldReturnListOfComments_whenCommentsAreConnectedToExpenseReport() {
         //given
         User user = User.builder()
                 .id("id")
