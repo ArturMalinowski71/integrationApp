@@ -1,30 +1,28 @@
 package com.envelo.businesstrip.model.entities.attachments;
 
+import com.envelo.businesstrip.model.entities.base.BaseEntity;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "attachments")
 @Inheritance(strategy = InheritanceType.JOINED)
+@AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
-@NoArgsConstructor
-public abstract class Attachment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public abstract class Attachment extends BaseEntity {
     private String type;
     private BigDecimal amount;
     private byte[] scanOfDocument;
-
-    public Attachment(String type, BigDecimal amount, byte[] scanOfDocument) {
-        this.type = type;
-        this.amount = amount;
-        this.scanOfDocument = scanOfDocument;
-    }
 }

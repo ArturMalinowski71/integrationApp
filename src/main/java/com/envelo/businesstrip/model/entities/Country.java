@@ -1,23 +1,21 @@
 package com.envelo.businesstrip.model.entities;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.envelo.businesstrip.model.entities.base.BaseEntity;
+import lombok.*;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
+@Table(name = "countries")
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
-@Table(name = "countries")
-public class Country {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class Country extends BaseEntity {
     @Column(nullable = false, length = 50)
     private String name;
 

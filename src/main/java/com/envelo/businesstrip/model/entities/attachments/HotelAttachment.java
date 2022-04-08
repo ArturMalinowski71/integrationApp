@@ -2,22 +2,25 @@ package com.envelo.businesstrip.model.entities.attachments;
 
 import com.envelo.businesstrip.model.entities.Meal;
 import com.envelo.businesstrip.model.entities.Place;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "hotel_attachments")
+@AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder
 @Getter
 @Setter
-@NoArgsConstructor
 public class HotelAttachment extends Attachment {
     @Column(nullable = false)
     private LocalDate startDate;
@@ -33,14 +36,4 @@ public class HotelAttachment extends Attachment {
 
     @Embedded
     private Meal meal;
-
-    public HotelAttachment(String type, BigDecimal amount, byte[] scanOfDocument, LocalDate startDate,
-                           LocalDate endDate, Place place, String country, Meal meal) {
-        super(type, amount, scanOfDocument);
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.place = place;
-        this.country = country;
-        this.meal = meal;
-    }
 }

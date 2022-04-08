@@ -1,23 +1,20 @@
 package com.envelo.businesstrip.model.entities;
 
+import com.envelo.businesstrip.model.entities.base.BaseEntity;
 import com.envelo.businesstrip.model.enums.Department;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "comments")
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 @Setter
-public class Comment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class Comment extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private User author;
 
@@ -30,12 +27,4 @@ public class Comment {
 
     @Column(nullable = false)
     private String content;
-
-    public Comment(User author, Department department, LocalDateTime creationTime, String content) {
-        this.author = author;
-        this.department = department;
-        this.creationTime = creationTime;
-        this.content = content;
-    }
-
 }
