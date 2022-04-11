@@ -24,6 +24,9 @@ public class Country extends BaseEntity {
 
     private boolean isActive = true;
 
+    @Column(nullable = false)
+    private String dietCurrency;
+
     @Column(nullable = false, length = 50)
     private String documentVersion;
 }

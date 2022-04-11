@@ -1,10 +1,6 @@
 package com.envelo.businesstrip.model.entities;
 
-import com.envelo.businesstrip.model.entities.base.BaseEntity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -14,6 +10,7 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Place {
     @Column(nullable = false, length = 50)
     private String city;
