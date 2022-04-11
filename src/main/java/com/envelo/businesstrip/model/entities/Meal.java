@@ -1,10 +1,7 @@
 package com.envelo.businesstrip.model.entities;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 import javax.persistence.Table;
@@ -15,6 +12,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Getter
 @Setter
+@Builder
 public class Meal {
     private int numberOfBreakfasts;
     private int numberOfLunches;
