@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -19,7 +18,6 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
-@Transactional
 class ApplicationFormRepositoryTest {
 
     @Autowired
@@ -120,13 +118,12 @@ class ApplicationFormRepositoryTest {
         entityManager.persist(second);
         entityManager.persist(car);
         entityManager.persist(plane);
-        //entityManager.persist(transports);
 
 
         //when
-        Long applicationFormId = (Long) entityManager.persistAndGetId(expected);
-        ApplicationForm actual = applicationFormRepository.getById(applicationFormId);
-
+        applicationFormRepository.save(expected);
+        ApplicationForm actual = applicationFormRepository.getById(expected.getId());
+        
         //then
         assertThat(actual).isNotNull();
         assertThat(actual).isEqualTo(expected);
