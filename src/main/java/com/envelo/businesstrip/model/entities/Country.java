@@ -22,6 +22,7 @@ public class Country extends BaseEntity {
     @Column(nullable = false)
     private BigDecimal dietAmount;
 
+    @Column(nullable = false)
     private boolean isActive = true;
 
     @Column(nullable = false)
